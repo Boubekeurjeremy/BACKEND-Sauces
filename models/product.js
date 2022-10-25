@@ -7,7 +7,7 @@ const productSchema = mongoose.Schema({
     description: { type: String, required: true},
     mainPepper: { type: String, required: true},
     imageUrl: { type: String, required: true},
-    heat: { type: Number, required: true},
+    heat: { type: Number, min: 1, max: 10, required: true},
     likes:  Number,
     dislikes: Number,
     usersLiked: [String],
